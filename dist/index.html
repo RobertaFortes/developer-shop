@@ -6,40 +6,34 @@
     <title>Coding Challenge VTEX</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/17aec4a1.index.min.css">
+    <link rel="stylesheet" href="css/de2353ba.index.min.css">
 
     <script src="script/lib/angular.min.js"></script>
     <script src="script/main.js"></script>
     <script src="script/controllers/developer-controller.js"></script>
+    <script src="script/directives/developer-directives.js"></script>
+
 
 
   </head>
 
   <body ng-controller="DeveloperController">
     <div class="container">
-      <div class="row">
+      <div class="row" id="placeholder" class="column-full" data-ver="1">
 
-         <ul id="placeholder" class="column-full" data-ver="1">
-           
-              <li ng-repeat="user in developers">{{user.nome}}</li>
+         
+            
               
+            
                 
               
-          </ul>
+          
         
       </div>
 
       <div class="row">
-        <h2>Add a developer</h2>
-        <form class="form-inline" role="form">
-          <div class="form-group">
-            <input type="text" placeholder="GitHub Username" class="form-control">
-          </div>
-          <div class="form-group">
-            <input type="text" placeholder="Price" class="form-control">
-          </div>
-          <button type="submit" class="btn btn-success">Add</button>
-        </form>
+        <h2>Add a Vtex´s developer</h2>
+        <dev-disponivel class="col-md-2" login="{{user.login}}" ng-repeat="user in members"><img class="img-responsive center-block" src="{{user.avatar_url}}"><p>R$ {{user.preco}}</p><button class="btn">Adicionar ao Carrinho</button></dev-disponivel>
       </div>
 
       <div class="cart row">

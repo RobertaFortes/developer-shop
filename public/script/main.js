@@ -1,3 +1,3 @@
-angular.module('devshop', []);
+angular.module('devshop', ['developerDiretiva']);
 
 
