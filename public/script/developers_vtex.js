@@ -17,7 +17,8 @@
     "received_events_url": "https://api.github.com/users/aabreur/received_events",
     "type": "User",
     "site_admin": false,
-    "preco": 200
+    "preco": 200,
+    "qtd": 1
   },
   {
     "login": "afonso-praca",
@@ -37,7 +38,8 @@
     "received_events_url": "https://api.github.com/users/afonso-praca/received_events",
     "type": "User",
     "site_admin": false,
-    "preco": 200
+    "preco": 200,
+    "qtd": 1
   },
   {
     "login": "brenoc",
@@ -57,7 +59,8 @@
     "received_events_url": "https://api.github.com/users/brenoc/received_events",
     "type": "User",
     "site_admin": false,
-    "preco": 200
+    "preco": 200,
+    "qtd": 1
   },
   {
     "login": "dfosco",
@@ -77,7 +80,8 @@
     "received_events_url": "https://api.github.com/users/dfosco/received_events",
     "type": "User",
     "site_admin": false,
-    "preco": 200
+    "preco": 200,
+    "qtd": 1
   },
   {
     "login": "gabrielarrais",
@@ -97,7 +101,8 @@
     "received_events_url": "https://api.github.com/users/gabrielarrais/received_events",
     "type": "User",
     "site_admin": false,
-    "preco": 200
+    "preco": 200,
+    "qtd": 1
   },
   {
     "login": "guilhermemmb",
@@ -117,7 +122,8 @@
     "received_events_url": "https://api.github.com/users/guilhermemmb/received_events",
     "type": "User",
     "site_admin": false,
-    "preco": 200
+    "preco": 200,
+    "qtd": 1
   },
   {
     "login": "leandrooriente",
@@ -137,7 +143,8 @@
     "received_events_url": "https://api.github.com/users/leandrooriente/received_events",
     "type": "User",
     "site_admin": false,
-    "preco": 200
+    "preco": 200,
+    "qtd": 1
   },
   {
     "login": "nevescode",
@@ -157,7 +164,8 @@
     "received_events_url": "https://api.github.com/users/nevescode/received_events",
     "type": "User",
     "site_admin": false,
-    "preco": 200
+    "preco": 200,
+    "qtd": 1
   },
   {
     "login": "rdumont",
@@ -177,7 +185,8 @@
     "received_events_url": "https://api.github.com/users/rdumont/received_events",
     "type": "User",
     "site_admin": false,
-    "preco": 200
+    "preco": 200,
+    "qtd": 1
   },
   {
     "login": "ribeirofelix",
@@ -197,7 +206,8 @@
     "received_events_url": "https://api.github.com/users/ribeirofelix/received_events",
     "type": "User",
     "site_admin": false,
-    "preco": 200
+    "preco": 200,
+    "qtd": 1
   },
   {
     "login": "rodrigomuniz",
@@ -217,7 +227,8 @@
     "received_events_url": "https://api.github.com/users/rodrigomuniz/received_events",
     "type": "User",
     "site_admin": false,
-    "preco": 200
+    "preco": 200,
+    "qtd": 1
   },
   {
     "login": "rodrigovidal",
@@ -237,7 +248,8 @@
     "received_events_url": "https://api.github.com/users/rodrigovidal/received_events",
     "type": "User",
     "site_admin": false,
-    "preco": 200
+    "preco": 200,
+    "qtd": 1
   },
   {
     "login": "uchoa",
@@ -257,7 +269,8 @@
     "received_events_url": "https://api.github.com/users/uchoa/received_events",
     "type": "User",
     "site_admin": false,
-    "preco": 200
+    "preco": 200,
+    "qtd": 1
   },
   {
     "login": "vmattos",
@@ -277,6 +290,7 @@
     "received_events_url": "https://api.github.com/users/vmattos/received_events",
     "type": "User",
     "site_admin": false,
-    "preco": 200
+    "preco": 200,
+    "qtd": 1
   }
 ]

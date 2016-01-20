@@ -54,7 +54,7 @@ module.exports = function(grunt) {
 			},
 
 			minificados: {
-				src: ['dist/js/**/*.min.js', 'dist/css/**/*.min.css']
+				src: ['dist/script/**/*.min.js', 'dist/style/**/*.min.css']
 			}
 		},
 
@@ -65,7 +65,7 @@ module.exports = function(grunt) {
 				expand: true,
 				cwd: 'public/coffee',
 				src: ['**/*.coffee'],
-				dest: 'public/js',
+				dest: 'public/script',
 				ext: '.js'
 			}
 		},
@@ -77,7 +77,7 @@ module.exports = function(grunt) {
 				expand: true,
 				cwd: 'public/less',
 				src: ['**/*.less'],
-				dest: 'public/css',
+				dest: 'public/style',
 				ext: '.css'
 			}
 
@@ -111,7 +111,7 @@ module.exports = function(grunt) {
 					event: ['changed']
 				},
 
-				files: 'public/js/**/*.js',
+				files: 'public/script/**/*.js',
 				tasks: 'jshint:js'
 
 			}
@@ -121,7 +121,7 @@ module.exports = function(grunt) {
 
 			js: {
 
-			src: ['public/js/**/*.js']
+			src: ['public/script/**/*.js']
 
 			}
 		},

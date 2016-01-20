@@ -1,0 +1,86 @@
+ <div class="row">
+        <h2>Add a Vtex´s developer</h2>
+        <div >
+          
+            <dev-disponivel class="col-md-2" login="{{user.login}}" ng-repeat="user in members"><p><img class="img-responsive center-block" src="{{user.avatar_url}}"></p><p><b>Valor/Hora R${{user.preco}}</b></p>
+            <p>
+             <form name="horasdev" ng-submit="submeter()">
+              <label>Qtd. horas:
+                <input type="number" name="qtd" min="1" max="99" ng-model="user.qtd">
+             </label>
+            
+            </p>
+            <button class="botao btn btn-primary" type="submit"><a href="/developers/cart" >Adicionar ao Carrinho</a></button>
+            </form>
+            </dev-disponivel>
+          
+       </div>
+
+
+<form name="horasdev" ng-submit="submeter()">
+          <div class="form-group">
+              <label>Qtd. horas:</label>
+                <input name="qtd" ng-model="cart.qtd" class="form-control">
+           </div>  
+            
+            
+            <button class="btn btn-primary" type="submit">Adicionar ao Carrinho</button>
+          </form>  
+
+<div class="cart row">
+        
+         
+        <h2>Cart</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th >Username</th>
+              <th >Price</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="product">
+              <td>{{user.login}}</td>
+              <td></td>
+              <td><button class="btn btn-danger pull-right">Remove</button></td>
+            </tr>
+            <tr class="product">
+              <td>firstdoit</td>
+              <td>$416</td>
+              <td><button class="btn btn-danger pull-right">Remove</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="totalizer row">
+        <div class="col-sm-5">
+          <div class="row">
+            <table class="table">
+              <tbody>
+                <tr class="total">
+                  <td>Total</td>
+                  <td class="tot">$640</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="col-sm-7 ">
+          <div class="row">
+            <form class="col-sm-5 aligncenter">
+              <p><label>Adicionar cupom de desconto</label></p>
+              <div class="input-group">
+             
+              <input class="form-control" type="text">
+              <span class="btn input-group-addon"><a type="submit">Adicionar</a></span>
+            </div>
+            </form>
+            <a href="developers/sucesso" class="btn btn-primary col-sm-6 right">Finalizar compra</a>
+          </div>
+        </div>
+</div>
+
+</div>

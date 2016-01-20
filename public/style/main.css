@@ -7,6 +7,15 @@ h2.devtitle{
 	font-size: 20px;
 }
 
+.right{
+	float: right;
+}
+
+.aligncenter{text-align: center;}
+
+.cart{margin-top: 40px}
+
+.totalizer{margin-bottom: 40px;}
 
 
 
