@@ -1,67 +1,53 @@
- <div class="row">
+<div class="row">
+  <div class="dev row">
         <h2>Add a Vtex´s developer</h2>
         <div >
           
             <dev-disponivel class="col-md-2" login="{{user.login}}" ng-repeat="user in members"><p><img class="img-responsive center-block" src="{{user.avatar_url}}"></p><p><b>Valor/Hora R${{user.preco}}</b></p>
-            <p>
-             <form name="horasdev" ng-submit="submeter()">
-              <label>Qtd. horas:
-                <input type="number" name="qtd" min="1" max="99" ng-model="user.qtd">
-             </label>
             
-            </p>
-            <button class="botao btn btn-primary" type="submit"><a href="/developers/cart" >Adicionar ao Carrinho</a></button>
-            </form>
+            <a ng-click="addtocart()" class="botao btn btn-primary" data-produtoId="{{user.id}}">Adicionar ao Carrinho</a>
+            
             </dev-disponivel>
           
        </div>
-
-
-<form name="horasdev" ng-submit="submeter()">
-          <div class="form-group">
-              <label>Qtd. horas:</label>
-                <input name="qtd" ng-model="cart.qtd" class="form-control">
-           </div>  
-            
-            
-            <button class="btn btn-primary" type="submit">Adicionar ao Carrinho</button>
-          </form>  
+  </div> 
+</div>
 
 <div class="cart row">
-        
-         
-        <h2>Cart</h2>
+   <h2>Cart</h2>
         <table class="table">
           <thead>
             <tr>
               <th >Username</th>
+               <th>Qty. Hours</th>
               <th >Price</th>
-              <th></th>
+              
             </tr>
           </thead>
           <tbody>
-            <tr class="product">
-              <td>{{user.login}}</td>
-              <td></td>
+            <tr ng-model="cartDisponivel" id="{{dev.id}}" ng-repeat="dev in cart">
+              <td>
+                <p ng-model="dev.login">
+                {{dev.login}}
+                </p>
+                <p data-toggle="collapse" data-target="#info">+info<p id="info" class="collapse">lalalal</p></p>
+              </td>
+              <td><input type="number" name="qtd" min="1" max="99"></td>
+              <td >${{dev.preco}}</td>
               <td><button class="btn btn-danger pull-right">Remove</button></td>
             </tr>
-            <tr class="product">
-              <td>firstdoit</td>
-              <td>$416</td>
-              <td><button class="btn btn-danger pull-right">Remove</button></td>
-            </tr>
+            
           </tbody>
         </table>
-      </div>
-
-      <div class="totalizer row">
+</div>
+<div class="totalizer row">
         <div class="col-sm-5">
           <div class="row">
             <table class="table">
               <tbody>
                 <tr class="total">
                   <td>Total</td>
-                  <td class="tot">$640</td>
+                  <td class="tot">$</td>
                 </tr>
               </tbody>
             </table>
@@ -78,9 +64,10 @@
               <span class="btn input-group-addon"><a type="submit">Adicionar</a></span>
             </div>
             </form>
-            <a href="developers/sucesso" class="btn btn-primary col-sm-6 right">Finalizar compra</a>
+            <a href="developers/cart" ng-click="fimcompra()" class="botao btn btn-primary col-sm-6 right" >Finalizar compra</a>
           </div>
         </div>
-</div>
 
-</div>
+    </div>
+    </div>
+

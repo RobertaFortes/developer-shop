@@ -1,36 +1,28 @@
-<form name="horasdev" ng-submit="submeter()">
-          <div class="form-group">
-              <label>Qtd. horas:</label>
-                <input name="qtd" ng-model="cart.qtd" class="form-control">
-           </div>  
-            
-            
-            <button class="btn btn-primary" type="submit">Adicionar ao Carrinho</button>
-          </form>  
-
-<div class="cart row">
-        
-         
-        <h2>Cart</h2>
+<div class="row" ng-controller="CartController">
+  <div class="cart row">
+    <h2>Cart</h2>
         <table class="table">
           <thead>
             <tr>
               <th >Username</th>
+               <th>Qty. Hours</th>
               <th >Price</th>
-              <th></th>
+             
             </tr>
           </thead>
           <tbody>
-            <tr class="product">
-              <td>{{user.login}}</td>
-              <td></td>
+            <tr ng-model="cartDisponivel" id="{{dev.id}}" ng-repeat="dev in members">
+              <td>
+                <p ng-model="dev.login">
+                {{dev.login}}
+                </p>
+                <p data-toggle="collapse" data-target="#info">+info<p id="info" class="collapse">lalalal</p></p>
+              </td>
+              <td><input type="number" name="qtd" min="1" max="99"></td>
+              <td >${{dev.preco}}</td>
               <td><button class="btn btn-danger pull-right">Remove</button></td>
             </tr>
-            <tr class="product">
-              <td>firstdoit</td>
-              <td>$416</td>
-              <td><button class="btn btn-danger pull-right">Remove</button></td>
-            </tr>
+            
           </tbody>
         </table>
       </div>
@@ -42,7 +34,7 @@
               <tbody>
                 <tr class="total">
                   <td>Total</td>
-                  <td class="tot">$640</td>
+                  <td class="tot">$</td>
                 </tr>
               </tbody>
             </table>
@@ -62,4 +54,6 @@
             <a href="developers/sucesso" class="btn btn-primary col-sm-6 right">Finalizar compra</a>
           </div>
         </div>
-</div>
+
+    </div>
+    </div>

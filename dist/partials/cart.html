@@ -1,24 +1,28 @@
-<div class="cart row">
-        <h2>Cart</h2>
+<div class="row" ng-controller="CartController">
+  <div class="cart row">
+    <h2>Cart</h2>
         <table class="table">
           <thead>
             <tr>
-              <th>Username</th>
-              <th>Price</th>
-              <th></th>
+              <th >Username</th>
+               <th>Qty. Hours</th>
+              <th >Price</th>
+             
             </tr>
           </thead>
           <tbody>
-            <tr class="product">
-              <td>brenoc</td>
-              <td>$224</td>
+            <tr ng-model="cartDisponivel" id="{{dev.id}}" ng-repeat="dev in members">
+              <td>
+                <p ng-model="dev.login">
+                {{dev.login}}
+                </p>
+                <p data-toggle="collapse" data-target="#info">+info<p id="info" class="collapse">lalalal</p></p>
+              </td>
+              <td><input type="number" name="qtd" min="1" max="99"></td>
+              <td >${{dev.preco}}</td>
               <td><button class="btn btn-danger pull-right">Remove</button></td>
             </tr>
-            <tr class="product">
-              <td>firstdoit</td>
-              <td>$416</td>
-              <td><button class="btn btn-danger pull-right">Remove</button></td>
-            </tr>
+            
           </tbody>
         </table>
       </div>
@@ -30,20 +34,26 @@
               <tbody>
                 <tr class="total">
                   <td>Total</td>
-                  <td class="tot">$640</td>
+                  <td class="tot">$</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
 
-        <div class="col-sm-7">
+        <div class="col-sm-7 ">
           <div class="row">
-            <form class="col-sm-6">
+            <form class="col-sm-5 aligncenter">
               <p><label>Adicionar cupom de desconto</label></p>
-              <p><span><input class="" type="text"></span><button class="btn" type="submit">Adicionar</button></p>
+              <div class="input-group">
+             
+              <input class="form-control" type="text">
+              <span class="btn input-group-addon"><a type="submit">Adicionar</a></span>
+            </div>
             </form>
-            <button class="btn btn-large col-sm-6">Finalizar compra</button>
+            <a href="developers/sucesso" class="btn btn-primary col-sm-6 right">Finalizar compra</a>
           </div>
         </div>
-      </div>
+
+    </div>
+    </div>
