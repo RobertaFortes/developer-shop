@@ -27,7 +27,8 @@ angular.module('devshop')
 	.error(function(erro){
 		console.log(erro);
 	});
-});	
+})
+
 
 
 
