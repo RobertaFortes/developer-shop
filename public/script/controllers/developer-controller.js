@@ -18,7 +18,7 @@ angular.module('devshop')
 	});
 	 
 	$scope.total = 0; 
-	$scope.addtocart = function(total, idProduto, idDev, scope) {	
+	$scope.addtocart = function(total, idProduto, idDev) {	
 	var produtoID = angular.element(document).data('id');
     console.log(produtoID);
     total += $scope.findProduto(produtoID).preco;
@@ -66,18 +66,23 @@ angular.module('devshop')
         $http.get('script/developers_vtex.json').
         success(function(data) {
             $scope.values = data;
-            angular.forEach($scope.values,function(value){
-              $scope.total += value.preco * value.qtd - desconto;
+            angular.forEach($scope.values,function(valor){
+              $scope.total += valor.preco * valor.qtd;
             });
-            console.log("get SUCCESS");
-            console.log($scope.total);
+           
         }).
         error(function(data) {
             console.log("get ERROR");
         });
         
 	};
-	
+	$scope.recalc = function (){
+      
+    	$scope.total = $scope.total - desconto;
+  		
+     	 
+       
+  };
 })
 
 

@@ -6,9 +6,9 @@ angular.module('cupomDiretiva', [])
   var validElement = angular.element('<div>{{ total }}</div>');
 
   var link = function (scope) {
-    scope.$watch("model.input", function (value) {
-      if(value === "SHIPIT") {
-        desconto = 10;
+    scope.$watch("model.input", function (bla) {
+      if(bla === "SHIPIT") {
+        desconto = 149;
          
        
         console.log(desconto);
@@ -17,16 +17,18 @@ angular.module('cupomDiretiva', [])
     });
   };
 
-  
+
 
   return {
     restrict: "E",
     replace: true,
     templateUrl: "partials/cupom.html",
     compile: function (tElem) {
-      tElem.append(validElement);
+     
 
       return link;
+     
+
     }
   }
 });
