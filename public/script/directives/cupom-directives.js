@@ -3,7 +3,7 @@ angular.module('cupomDiretiva', [])
 .directive('cupomDisponivel', function(){
   desconto = 0;
 
-  var validElement = angular.element('<div>{{ total }}</div>');
+  
 
   var link = function (scope) {
     scope.$watch("model.input", function (bla) {
