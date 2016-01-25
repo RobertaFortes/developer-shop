@@ -17,9 +17,7 @@ angular.module('cupomDiretiva', [])
     });
   };
 
-  $scope.recalcular = function (recalc){
-    console.log(desconto);
-  };
+  
 
   return {
     restrict: "E",
