@@ -1,5 +1,5 @@
 
-angular.module('devshop', ['developerDiretiva', 'ngRoute','cartDiretiva',])
+angular.module('devshop', ['developerDiretiva', 'ngRoute','cartDiretiva','cupomDiretiva'])
 .config(function($routeProvider, $locationProvider){
 
 	$locationProvider.html5Mode(true);
@@ -26,6 +26,7 @@ angular.module('devshop', ['developerDiretiva', 'ngRoute','cartDiretiva',])
 		templateUrl: 'partials/sucesso.html'
 		
 	});
+	
 
 
 	$routeProvider.otherwise({ redirectTo: '/developers'});

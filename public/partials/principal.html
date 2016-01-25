@@ -6,7 +6,7 @@
             <dev-disponivel class="col-md-2" login="{{user.login}}" ng-repeat="user in members"><p><img class="img-responsive center-block" src="{{user.avatar_url}}"></p><p><b>Valor/Hora R${{user.preco}}</b></p>
             
             <a ng-click="addtocart()" class="botao btn btn-primary" data-produtoId="{{user.id}}">Adicionar ao Carrinho</a>
-            <button ng-click="$storage.x = $storage.x + 1">{{$storage.x}}</button> + <button ng-click="$storage.y = $storage.y + 1">{{$storage.y}}</button> = {{$storage.x + $storage.y}}
+           
             </dev-disponivel>
            
 
@@ -27,9 +27,9 @@
             </tr>
           </thead>
           <tbody>
-            <tr ng-model="cartDisponivel" id="{{dev.id}}" ng-repeat="dev in cart">
+            <tr ng-model="cartDisponivel" id="{{dev.id}}" ng-repeat="dev in carts">
               <td>
-                <p ng-model="dev.login">
+                <p>
                 {{dev.login}}
                 </p>
                 <p data-toggle="collapse" data-target="#info">+info<p id="info" class="collapse">lalalal</p></p>
@@ -43,30 +43,32 @@
         </table>
 </div>
 <div class="totalizer row">
-        <div class="col-sm-5">
+        <div class="col-sm-8">
           <div class="row">
             <table class="table">
               <tbody>
-                <tr class="total">
+                <tr ng-model="cupomDisponivel">
                   <td>Total</td>
-                  <td class="tot">$</td>
+                  <td class="tot">$ {{total}} </td>
+                </tr>
+                <tr>
+                    <td>
+                    <p><label>Adicionar cupom de desconto</label></p>
+                    <cupom-Disponivel>
+                      
+                  
+                    </cupom-Disponivel>
+                  </td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
 
-        <div class="col-sm-7 ">
+        <div class="col-sm-4 ">
           <div class="row">
-            <form class="col-sm-5 aligncenter">
-              <p><label>Adicionar cupom de desconto</label></p>
-              <div class="input-group">
-             
-              <input class="form-control" type="text">
-              <span class="btn input-group-addon"><a type="submit">Adicionar</a></span>
-            </div>
-            </form>
-            <a href="developers/cart" ng-click="fimcompra()" class="botao btn btn-primary col-sm-6 right" >Finalizar compra</a>
+            
+            <a href="developers/cart" class="botao btn btn-primary col-sm-6 right" >Finalizar compra</a>
           </div>
         </div>
 

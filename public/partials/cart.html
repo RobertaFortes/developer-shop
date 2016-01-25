@@ -11,14 +11,14 @@
             </tr>
           </thead>
           <tbody>
-            <tr ng-model="cartDisponivel" id="{{dev.id}}" ng-repeat="dev in members">
+            <tr ng-model="cartDisponivel" id="{{dev.id}}" ng-repeat="dev in cart">
               <td>
                 <p ng-model="dev.login">
                 {{dev.login}}
                 </p>
                 <p data-toggle="collapse" data-target="#info">+info<p id="info" class="collapse">lalalal</p></p>
               </td>
-              <td><input type="number" name="qtd" min="1" max="99"></td>
+              <td><input type="number" name="qtd" min="1" max="99" ng-model="dev.quantidade"></td>
               <td >${{dev.preco}}</td>
               <td><button class="btn btn-danger pull-right">Remove</button></td>
             </tr>
@@ -34,7 +34,7 @@
               <tbody>
                 <tr class="total">
                   <td>Total</td>
-                  <td class="tot">$</td>
+                  <td class="tot">$ {{total}}</td>
                 </tr>
               </tbody>
             </table>

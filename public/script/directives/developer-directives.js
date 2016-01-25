@@ -25,23 +25,5 @@ angular.module('developerDiretiva', [])
 angular.module('cartDiretiva', [])
 .directive('cartDisponivel', function(){
 
-	var ddo = {};
-
-	ddo.restrict = "AE";
-	
-	ddo.scope = {
-		id: '@id',
-		
-	};
-
-	ddo.transclude = true;
-
-	ddo.template = 
-
-		'<h2 class="devid">{{id}}</h2>'
-      +	'<div ng-transclude></div>'
-
-    
-	return ddo;
 })
 
